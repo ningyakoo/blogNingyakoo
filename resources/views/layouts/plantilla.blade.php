@@ -16,9 +16,9 @@
     <!-- header -->
     <ul>
         <li><a href="{{ route('home') }}">HOME</a></li>
-        <li><a href="{{ route('designs') }}">DISEÑOS</a></li>
-        <li><a href="{{ route('') }}">HOME</a></li>
-        <li><a href="{{ route('contact') }}">HOME</a></li>
+        <li><a href="{{ route('cv') }}">CURRICULUM</a></li>
+        <li><a href="{{ route('pl') }}">CARTA DE PRESENTACION</a></li>
+        <li><a href="{{ route('contact') }}">CONTACTO</a></li>
     </ul>
     <!-- nav -->
     
