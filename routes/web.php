@@ -25,6 +25,11 @@ Route::get('cursos/{curso}', [CursoController::class, 'show'])->where([
     'curso' => '[A-Za-z]+'
 ]);
 
+Route::view('/', 'home')->name('home');
+Route::view('Curriculum', 'secciones/cv')->name('cv');
+Route::view('Carta de presentacion', 'secciones/pl')->name('pl');
+Route::view('Contacto', 'secciones/contact')->name('contact');
+
 /*Route::get('cursos/{curso}/{categoria?}', function ($curso, $categoria = null) {
 
     if($categoria){

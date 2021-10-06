@@ -14,12 +14,17 @@
 </head>
 <body>
     <!-- header -->
-    <ul>
-        <li><a href="{{ route('home') }}">HOME</a></li>
-        <li><a href="{{ route('cv') }}">CURRICULUM</a></li>
-        <li><a href="{{ route('pl') }}">CARTA DE PRESENTACION</a></li>
-        <li><a href="{{ route('contact') }}">CONTACTO</a></li>
-    </ul>
+    <div class="container">
+        <nav id='menu'>
+            <!-- <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label> -->
+            <ul>
+                <li><a id="hdrLinkToHome" class="logo" href="{{ route('home') }}"><img id="logo-header" src="images/logo_icon.png"></a></li>
+                <li class="menu-main"><a href="{{ route('cv') }}">CURRICULUM</a></li>
+                <li class="menu-main"><a href="{{ route('pl') }}">CARTA DE PRESENTACION</a></li>
+                <li class="menu-main"><a href="{{ route('contact') }}">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
     <!-- nav -->
     
     @yield('content')
