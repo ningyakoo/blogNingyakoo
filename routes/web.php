@@ -17,13 +17,19 @@ use App\Http\Controllers\CursoController;
 
 Route::get('/', HomeController::class);
     
-Route::get('cursos', [CursoController::class, 'index']);
+Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
 
-Route::get('cursos/create', [CursoController::class, 'create']);
+Route::get('cursos/create', [CursoController::class, 'create'])->name('cursos.create');
 
-Route::get('cursos/{curso}', [CursoController::class, 'show'])->where([
+Route::post('cursos', [CursoController::class, 'store'])->name('cursos.store');
+
+Route::get('cursos/{curso}', [CursoController::class, 'show'])->name('cursos.show')->where([
     'curso' => '[A-Za-z]+'
 ]);
+
+Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('cursos.edit');
+
+Route::put('cursos/curso', [CursoController::class, 'update'])->name('cursos.update');
 
 Route::view('/', 'home')->name('home');
 Route::view('Curriculum', 'secciones/cv')->name('cv');
